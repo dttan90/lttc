@@ -10,7 +10,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      <link href="app/fontend/css/style.css" rel="stylesheet">
+      <link href="app/frontend/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -99,10 +99,16 @@
 
                                                                   echo '<td><span class="text-muted">' . $updated_by . '</span></td>';
 
-                                                                  echo '<td>';
-                                                                        echo '<button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>';
-                                                                        echo '<button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>';
-                                                                  echo '</td>';
+                                                                  echo '<td><span class="text-muted"><a href="./app/frontend/update.php?username='.$username.'&act=u">Edit</a></span></td>';
+
+                                                                  echo '<td><span class="text-muted"><a href="./app/backend/delete.php?username='.$username.'&act=d">Delete</a></span></td>';
+
+
+
+                                                                  // echo '<td>';
+                                                                  //       echo '<button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>';
+                                                                  //       echo '<button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>';
+                                                                  // echo '</td>';
                                                             echo '</tr>';
                                                       }
 

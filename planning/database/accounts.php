@@ -131,3 +131,7 @@ function accIsAlreadyExists($__tb_accounts, $username)
 
       return execQuery($query);
 }
+
+/*
+      seft
+*/ 

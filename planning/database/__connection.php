@@ -7,7 +7,7 @@ function __conn($db = null)
       if ($db == null) $db = "planning"; // mặc định
       $host = "127.0.0.1";
       $username = "root";
-      $password = "tan.doan";
+      $password = "";
       $conn = mysqli_connect($host, $username, $password, $db) or die('Không thể kết nối tới Server ' . $host);
       $conn->query("SET NAMES 'utf8'");
 

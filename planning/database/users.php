@@ -84,18 +84,18 @@ function usersUpdate($__tb_users, $data, $where = null)
             // kiểm tra dữ liệu có rỗng
             if (!empty($full_name)) {
                   // Kiểm tra nếu lần đầu thêm thì không cần thêm dấu phẩy phía trước để đảm bảo đúng cú pháp
-                  $update_set = empty($update_set) ? "`full_name`='$full_name'" : ", `full_name`='$full_name'";
+                  $update_set .= empty($update_set) ? "`full_name`='$full_name'" : ", `full_name`='$full_name'";
             }
       }
 
-      if (isset($data['permission'])) {
+      if (isset($data['permission']) ) {
             // lấy giá trị cột
             $permission = trim($data['permission']);
 
             // kiểm tra dữ liệu có rỗng
             if (!empty($permission)) {
                   // Kiểm tra nếu lần đầu thêm thì không cần thêm dấu phẩy phía trước để đảm bảo đúng cú pháp
-                  $update_set = empty($update_set) ? "`permission`='$permission'" : ", `permission`='$permission'";
+                  $update_set .= empty($update_set) ? "`permission`='$permission'" : ", `permission`='$permission'";
             }
       }
 
@@ -106,7 +106,7 @@ function usersUpdate($__tb_users, $data, $where = null)
             // kiểm tra dữ liệu có rỗng
             if (!empty($production_line)) {
                   // Kiểm tra nếu lần đầu thêm thì không cần thêm dấu phẩy phía trước để đảm bảo đúng cú pháp
-                  $update_set = empty($update_set) ? "`production_line`='$production_line'" : ", `production_line`='$production_line'";
+                  $update_set .= empty($update_set) ? "`production_line`='$production_line'" : ", `production_line`='$production_line'";
             }
       }
 
@@ -117,7 +117,7 @@ function usersUpdate($__tb_users, $data, $where = null)
             // kiểm tra dữ liệu có rỗng
             if (!empty($updated_by)) {
                   // Kiểm tra nếu lần đầu thêm thì không cần thêm dấu phẩy phía trước để đảm bảo đúng cú pháp
-                  $update_set = empty($update_set) ? "`updated_by`='$updated_by'" : ", `updated_by`='$updated_by'";
+                  $update_set .= empty($update_set) ? "`updated_by`='$updated_by'" : ", `updated_by`='$updated_by'";
             }
       }
       // ----------------------------------
